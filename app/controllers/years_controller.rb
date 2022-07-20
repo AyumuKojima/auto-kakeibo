@@ -1,5 +1,6 @@
 class YearsController < ApplicationController
   def index
-    redirect_to year_month_spends_path(2022, 7)
+    time = Time.now
+    redirect_to year_month_spends_path(time.year, time.month)
   end
 end

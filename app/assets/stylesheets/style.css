@@ -1,0 +1,94 @@
+.header {
+  height: 70px;
+  background-color: rgb(143, 254, 217);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  width: 200px;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-logo {
+  height: 80%;
+  border: 2px solid lightgreen;
+  border-radius: 10px;
+  background-color: rgb(9, 175, 73);
+}
+
+.logo-btn {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(200, 238, 210);
+}
+
+.header-right {
+  width: 150px;
+  margin-right: 5%;
+}
+
+.header-user {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.user-name {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.user-name:hover {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 70px);
+  background-color: aquamarine;
+}
+
+.side-bar {
+  width: 50px;
+  background-color: bisque;
+}
+
+.container {
+  width: calc(100vw - 50px);
+}
+
+.container-header {
+  height: 45px;
+  background-color: rgb(113, 211, 113);
+}
+
+.contents {
+  height: calc(100% - 45px);
+  display: flex;
+}
+
+.contents-main {
+  width: calc(100% - 250px);
+  background-color: chocolate;
+}
+
+.contents-sub {
+  width: 250px;
+  background-color: cornflowerblue;
+}
+
+.contents-hidden {
+  display: none;
+}

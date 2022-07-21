@@ -57,7 +57,6 @@
 .main {
   display: flex;
   height: calc(100vh - 70px);
-  background-color: aquamarine;
 }
 
 .side-bar {
@@ -117,7 +116,38 @@
 
 .container-header {
   height: 45px;
-  background-color: rgb(113, 211, 113);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(225, 250, 225);
+}
+
+.sum {
+  height: 85%;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sum-title {
+  font-size: 17px;
+}
+
+.sum-money {
+  height: 88%;
+  width: 170px;
+  margin: 0 5px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 23px;
+  border: 1px solid black;
+  padding-right: 5px;
+}
+
+.yen {
+  font-size: 18px;
 }
 
 .contents {
@@ -127,12 +157,12 @@
 
 .contents-main {
   width: calc(100% - 250px);
-  background-color: chocolate;
+  border: 1px solid black;
 }
 
 .contents-sub {
   width: 250px;
-  background-color: cornflowerblue;
+  border: 1px solid black;
 }
 
 .contents-hidden {

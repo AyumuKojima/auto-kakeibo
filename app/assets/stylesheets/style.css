@@ -122,11 +122,27 @@
 
 .side-bar {
   width: 50px;
+  background-color: bisque;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-bar-top {
+  width: 100%;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: bisque;
-  padding-top: 30px;
+}
+
+.side-bar-bottom {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icon {
@@ -168,6 +184,13 @@
   width: 85%;
   height: 85%;
   background-image: url('graph.png');
+  background-size: cover;
+}
+
+.user-icon {
+  width: 85%;
+  height: 85%;
+  background-image: url('user.png');
   background-size: cover;
 }
 

@@ -369,6 +369,20 @@
   border: 1px solid black;
 }
 
+.to-month-show {
+  height: 5%;
+  width: calc(100% - 40px);
+  margin: 5px 20px;
+  color: aliceblue;
+}
+
+.month-show-btn {
+  height: 90%;
+  width: 15%;
+  background-color: rgb(250, 113, 113);
+  border-radius: 5px;
+}
+
 .calendar-wrapper {
   height: 93%;
   width: 100%;

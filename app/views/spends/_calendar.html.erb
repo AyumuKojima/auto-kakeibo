@@ -1,0 +1,42 @@
+<div class="calendar-wrapper centering">
+  <div class="calendar">
+    <div class="week-row">
+      <div class="week sunday centering">日</div>
+      <div class="week centering">月</div>
+      <div class="week centering">火</div>
+      <div class="week centering">水</div>
+      <div class="week centering">木</div>
+      <div class="week centering">金</div>
+      <div class="week saturday centering">土</div>
+    </div>
+    <div class="calendar-rows">
+      <% 6.times do %>
+        <div class="calendar-row">
+          <div class="calendar-date sunday">
+            <p class="date-num centering">27</p>
+            <div class="date-sums">
+              <p class="spend-date-sum centering">1200円</p>
+              <p class="income-date-sum centering">3000円</p>
+            </div>
+          </div>
+          <% 5.times do %>
+            <div class="calendar-date">
+              <p class="date-num centering">28</p>
+              <div class="date-sums">
+                <p class="spend-date-sum centering">1200円</p>
+                <p class="income-date-sum centering">3000円</p>
+              </div>
+            </div>
+          <% end %>
+          <div class="calendar-date saturday">
+            <p class="date-num centering">2</p>
+            <div class="date-sums">
+              <p class="spend-date-sum centering">1200円</p>
+              <p class="income-date-sum centering">3000円</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

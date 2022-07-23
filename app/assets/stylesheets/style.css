@@ -43,7 +43,7 @@
 }
 
 .header-right {
-  width: 320px;
+  width: 350px;
   margin-right: 5%;
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@
   font-size: 20px;
   font-weight: bold;
   color: green;
-  margin-left: 8px;
+  margin-left: 25px;
   display: flex;
   align-items: center;
   justify-content: center;

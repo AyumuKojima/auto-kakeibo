@@ -433,6 +433,10 @@
   border: 1px solid black;
 }
 
+.last-month-date, .next-month-date {
+  background-color: rgb(236, 236, 236);
+}
+
 .date-num {
   height: 25%;
   font-size: 15px;

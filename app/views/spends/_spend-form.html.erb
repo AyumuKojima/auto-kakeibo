@@ -1,5 +1,9 @@
 <%= form_with class: "spend-input-form", id: "form" do |f| %>
-  <div class="spend-form-title centering">支出を登録</div>
+  <div class="spend-form-header">
+    <div></div>
+    <div class="spend-form-title centering">支出を登録</div>
+    <div class="to-edit-form-btn centering pointer">編集</div>
+  </div>
   <div class="spend-fields">
     <div class="day-form">
       <%= raw sprintf(

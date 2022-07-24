@@ -250,7 +250,7 @@
 }
 
 .contents-sub {
-  width: 265px;
+  width: 275px;
   border: 2px solid black;
   border-left: none;
   border-top-right-radius: 13px;
@@ -341,12 +341,35 @@
   background-color: white;
 }
 
+.spend-form-header {
+  height: 30px;
+  width: 100%;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 25px;
+}
+
 .spend-form-title {
   height: 30px;
-  margin-top: 3px;
   font-size: 17px;
   font-weight: bold;
   color: rgb(57, 183, 233);
+}
+
+.to-edit-form-btn {
+  height: 80%;
+  width: 35px;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-right: 10px;
+  background-color: rgb(205, 205, 251);
+  color: white;
+}
+
+.to-edit-form-btn:hover {
+  background-color: blue;
 }
 
 .day-form {
@@ -361,6 +384,10 @@
   margin-left: 11px;
   padding: 3px;
   text-align: right;
+}
+
+#_day_1i, #_day_2i, #_day_3i:hover {
+  cursor: pointer;
 }
 
 #_day_1i {

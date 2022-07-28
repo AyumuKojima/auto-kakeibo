@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="header-left">
+    <div class="header-logo">
+      <%= link_to 'Auto家計簿', root_path, class: 'logo-btn' %>
+    </div>
+  </div>
+  <div class="header-right">
+    <% if @month == 1 %>
+      <%= link_to '<', year_month_spends_path(@year-1, 12), class: 'to-last-month' %>
+    <% else %>
+      <%= link_to '<', year_month_spends_path(@year, @month-1), class: 'to-last-month' %>
+    <% end %>
+    <% if @month == 12 %>
+      <%= link_to '>', year_month_spends_path(@year+1, 1), class: 'to-next-month' %>
+    <% else %>
+      <%= link_to '>', year_month_spends_path(@year, @month+1), class: 'to-next-month' %>
+    <% end %>
+    <div class="header-month">
+      <div class="display-year" id="display-year"><%= @year %></div>
+      <p class="nen">年</p>
+      <div class="display-month" id="display-month"><%= @month %></div>
+      <p class="gatu">月</p>
+    </div>
+    <%= link_to '今月', year_month_spends_path(Time.now.year, Time.now.month), class: 'to-this-month' %>
+  </div>
+</div>

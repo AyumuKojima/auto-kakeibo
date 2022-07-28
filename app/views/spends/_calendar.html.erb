@@ -1,0 +1,70 @@
+<div class="calendar-wrapper centering">
+  <div class="calendar">
+    <div class="week-row">
+      <div class="week sunday centering">日</div>
+      <div class="week centering">月</div>
+      <div class="week centering">火</div>
+      <div class="week centering">水</div>
+      <div class="week centering">木</div>
+      <div class="week centering">金</div>
+      <div class="week saturday centering">土</div>
+    </div>
+    <div class="calendar-rows">
+      <% index = 0 %>
+      <% date_num = 1 %>
+      <% next_date_num = 1 %>
+      <% 6.times do %>
+        <div class="calendar-row">
+          <% 7.times do %>
+            <% if index < @this_month_wday %>
+              <div class="calendar-date last-month-date">
+                <p class="date-num centering"><%= @date_num_of_last_month - @this_month_wday + index + 1 %></p>
+                <div class="date-sums">
+                  <p class="spend-date-sum centering">1200円</p>
+                  <p class="income-date-sum centering">3000円</p>
+                </div>
+              </div>
+            <% elsif date_num <= @date_num_of_this_month %>
+              <% if index % 7 == 0 %>
+                <div class="calendar-date this-month-date sunday">
+                  <p class="date-num centering"><%= date_num %></p>
+                  <div class="date-sums">
+                    <p class="spend-date-sum centering">1200円</p>
+                    <p class="income-date-sum centering">3000円</p>
+                  </div>
+                </div>
+              <% elsif index % 7 == 6 %>
+                <div class="calendar-date this-month-date saturday">
+                  <p class="date-num centering"><%= date_num %></p>
+                  <div class="date-sums">
+                    <p class="spend-date-sum centering">1200円</p>
+                    <p class="income-date-sum centering">3000円</p>
+                  </div>
+                </div>
+              <% else %>
+                <div class="calendar-date this-month-date">
+                  <p class="date-num centering"><%= date_num %></p>
+                  <div class="date-sums">
+                    <p class="spend-date-sum centering">1200円</p>
+                    <p class="income-date-sum centering">3000円</p>
+                  </div>
+                </div>
+              <% end %>
+              <% date_num += 1 %>
+            <% else %>
+              <div class="calendar-date next-month-date">
+                <p class="date-num centering"><%= next_date_num %></p>
+                <div class="date-sums">
+                  <p class="spend-date-sum centering">1200円</p>
+                  <p class="income-date-sum centering">3000円</p>
+                </div>
+              </div>
+              <% next_date_num += 1 %>
+            <% end %>
+            <% index += 1 %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

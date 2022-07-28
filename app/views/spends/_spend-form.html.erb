@@ -1,51 +1,106 @@
-<%= form_with class: "spend-input-form", id: "form" do |f| %>
-  <div class="spend-form-header">
-    <div></div>
-    <div class="spend-form-title centering">支出を登録</div>
-    <div class="to-edit-form-btn centering pointer">編集</div>
-  </div>
-  <div class="spend-fields">
-    <div class="day-form">
-      <%= raw sprintf(
-                f.date_select(
-                  :day,
-                  use_month_numbers: true,
-                  default: Date.today,
-                  start_year: (Date.today.year - 50),
-                  end_year: (Date.today.year + 10),
-                  date_separator: '%s'),
-                "<p class='year'> 年 </p>", "<p class='month'> 月 </p>") + "<p class='day'> 日 </p>" %>
+<% if spend_edit %>
+  <%= form_with class: "spend-form", id: "spend-edit-form" do |f| %>
+    <div class="spend-form-header">
+      <div></div>
+      <div class="spend-form-title centering">支出を編集</div>
+      <div class="to-edit-form-btn centering pointer">登録</div>
     </div>
-    <div class="error-messages" id="spend-error-form" style="display: none;"><ul id="spend-error-messages"></ul></div>
-    <div class="money-field">
-      <div class="label-field">
-        <%= f.label :money, class: "label" %>
+    <div class="spend-fields">
+      <div class="day-form">
+        <%= raw sprintf(
+                  f.date_select(
+                    :day,
+                    use_month_numbers: true,
+                    default: Date.today,
+                    start_year: (Date.today.year - 50),
+                    end_year: (Date.today.year + 10),
+                    date_separator: '%s'),
+                  "<p class='year'> 年 </p>", "<p class='month'> 月 </p>") + "<p class='day'> 日 </p>" %>
       </div>
-      <div class="money-form-cover">
-        <%= f.text_field :money, class: "spend-money-input-form", placeholder: "支出額（1 ~ 99,999,999）" %>
-        <p class="en">円</p>
+      <div class="error-messages" id="spend-error-form" style="display: none;"><ul id="spend-error-messages"></ul></div>
+      <div class="money-field">
+        <div class="label-field">
+          <%= f.label :money, class: "label" %>
+        </div>
+        <div class="money-form-cover">
+          <%= f.text_field :money, class: "spend-money-input-form", placeholder: "支出額（1 ~ 99,999,999）" %>
+          <p class="en">円</p>
+        </div>
+      </div>
+      <div class="category-id-field">
+        <div class="label-field">
+          <%= f.label :category_id, class: "label" %>
+        </div>
+        <select class="spend-category-id-select pointer">
+          <option value="1">食費</option>
+          <option value="2">交通費</option>
+          <option value="3">固定費</option>
+        </select>
+      </div>
+      <div class="memo-field">
+        <div class="label-field">
+          <%= f.label :memo, class: "label" %>
+        </div>
+        <%= f.text_area :memo, placeholder: "メモを入力（任意）", class: "spend-memo-form", row: "10" %>
       </div>
     </div>
-    <div class="category-id-field">
-      <div class="label-field">
-        <%= f.label :category_id, class: "label" %>
+    <div class="spend-btn-space">
+      <div class="spend-edit-submit-wrapper">
+        <%= f.submit "編集する", id: "spend-edit-submit", class: "spend-edit-submit centering" %>
+        <%= link_to '削除する', id: 'spend-delete-btn', class: 'spend-delete-btn centering' %>
       </div>
-      <select class="spend-category-id-select pointer">
-        <option value="1">食費</option>
-        <option value="2">交通費</option>
-        <option value="3">固定費</option>
-      </select>
     </div>
-    <div class="memo-field">
-      <div class="label-field">
-        <%= f.label :memo, class: "label" %>
+  <% end %>
+<% else %>
+  <%= form_with class: "spend-form", id: "spend-input-form" do |f| %>
+    <div class="spend-form-header">
+      <div></div>
+      <div class="spend-form-title centering">支出を登録</div>
+      <div class="to-edit-form-btn centering pointer">編集</div>
+    </div>
+    <div class="spend-fields">
+      <div class="day-form">
+        <%= raw sprintf(
+                  f.date_select(
+                    :day,
+                    use_month_numbers: true,
+                    default: Date.today,
+                    start_year: (Date.today.year - 50),
+                    end_year: (Date.today.year + 10),
+                    date_separator: '%s'),
+                  "<p class='year'> 年 </p>", "<p class='month'> 月 </p>") + "<p class='day'> 日 </p>" %>
       </div>
-      <%= f.text_area :memo, placeholder: "メモを入力（任意）", class: "spend-memo-form", row: "10" %>
+      <div class="error-messages" id="spend-error-form" style="display: none;"><ul id="spend-error-messages"></ul></div>
+      <div class="money-field">
+        <div class="label-field">
+          <%= f.label :money, class: "label" %>
+        </div>
+        <div class="money-form-cover">
+          <%= f.text_field :money, class: "spend-money-input-form", placeholder: "支出額（1 ~ 99,999,999）" %>
+          <p class="en">円</p>
+        </div>
+      </div>
+      <div class="category-id-field">
+        <div class="label-field">
+          <%= f.label :category_id, class: "label" %>
+        </div>
+        <select class="spend-category-id-select pointer">
+          <option value="1">食費</option>
+          <option value="2">交通費</option>
+          <option value="3">固定費</option>
+        </select>
+      </div>
+      <div class="memo-field">
+        <div class="label-field">
+          <%= f.label :memo, class: "label" %>
+        </div>
+        <%= f.text_area :memo, placeholder: "メモを入力（任意）", class: "spend-memo-form", row: "10" %>
+      </div>
     </div>
-  </div>
-  <div class="spend-btn-space">
-    <div class="submit-cover centering">
-      <%= f.submit "登録する", id: "submit", class: "submit centering" %>
+    <div class="spend-btn-space">
+      <div class="submit-cover centering">
+        <%= f.submit "登録する", id: "spend-input-submit", class: "submit centering" %>
+      </div>
     </div>
-  </div>
+  <% end %>
 <% end %>

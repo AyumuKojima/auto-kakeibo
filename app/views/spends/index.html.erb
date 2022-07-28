@@ -13,7 +13,7 @@
           <p class="hide-form-btn pointer centering" style="display:none;">▼</p>
         </div>
         <div class="spend-form-wrapper">
-          <%= render partial: 'spend-form' %>
+          <%= render partial: 'spend-form', locals: { spend_edit: false } %>
         </div>
         <div class="form-header">
           <p>26日の支出一覧</p>

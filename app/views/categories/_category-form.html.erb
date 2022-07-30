@@ -1,0 +1,31 @@
+<%= form_with class: 'category-form', id: 'category-input-form' do |f| %>
+  <div class="category-form-header centering">
+    <div class="category-form-title centering">支出カテゴリ</div>
+  </div>
+  <div class="category-fields">
+    <div class="error-messages" id="category-error-form" style="display: none;"><ul id="category-error-messages"></ul></div>
+    <div class="category-title-field">
+      <div class="label-field">
+        <%= f.label :title, class: "label" %>
+      </div>
+      <div class="category-title-form-cover">
+        <%= f.text_field :title, class: "category-title-form", placeholder: "カテゴリ名を入力" %>
+      </div>
+    </div>
+    <div class="category-color-field">
+      <div class="label-field">
+        <%= f.label :color, class: "label" %>
+      </div>
+      <div class="category-color-form-cover">
+        <select class="category-color-select pointer">
+          <option value="1">あか</option>
+          <option value="2">あお</option>
+          <option value="3">みどり</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="category-submit-fields">
+    <%= f.submit "登録する", id: "category-input-submit", class: "category-submit centering" %>
+  </div>
+<% end %>

@@ -1,0 +1,259 @@
+.contents-sub-main {
+  width: calc(100% - 15px);
+}
+
+.contents-sub-bar {
+  width: 15px;
+  background-color: rgb(82, 82, 82);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  font-size: 13px;
+}
+
+.switch-btns {
+  height: 30px;
+  width: 100%;
+  display: flex;
+}
+
+.spend-btn {
+  height: 100%;
+  width: 80%;
+  color: blue;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(130, 207, 237);
+}
+
+.income-btn {
+  height: 100%;
+  width: 20%;
+  color: green;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(186, 247, 94);
+}
+
+.spend-btn:hover {
+  cursor: pointer;
+}
+
+.income-btn:hover {
+  cursor: pointer;
+}
+
+.form-header {
+  height: 25px;
+  width: 100%;
+  color: white;
+  background-color: rgb(132, 132, 132);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.hide-form-btn {
+  height: 100%;
+  width: 30px;
+}
+
+.spend-form-wrapper {
+  height: 440px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(218, 241, 250);
+}
+
+.spend-form {
+  height: 98%;
+  width: 95%;
+  padding: 5px;
+  margin-top: 5px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.spend-form-header {
+  height: 30px;
+  width: 100%;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 25px;
+}
+
+.spend-form-title {
+  height: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(57, 183, 233);
+}
+
+.to-edit-form-btn {
+  height: 80%;
+  width: 35px;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-right: 10px;
+  background-color: rgb(205, 205, 251);
+  color: white;
+}
+
+.to-edit-form-btn:hover {
+  background-color: blue;
+}
+
+.day-form {
+  display: flex;
+  height: 25px;
+  margin: 15px 0 15px;
+}
+
+#_day_1i, #_day_2i, #_day_3i {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-left: 11px;
+  padding: 3px;
+  text-align: right;
+}
+
+#_day_1i, #_day_2i, #_day_3i:hover {
+  cursor: pointer;
+}
+
+#_day_1i {
+  width: 52px;
+}
+
+#_day_2i, #_day_3i {
+  width: 33px;
+}
+
+.year, .month, .day {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1px;
+  margin-left: 4px;
+}
+
+.money-field {
+  padding: 0 5px;
+  margin-bottom: 15px;
+}
+
+.label-field {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5px;
+  padding: 0 15px 0 5px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.money-form-cover {
+  display: flex;
+}
+
+.spend-money-input-form {
+  height: 28px;
+  width: 185px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 13px;
+  padding: 3px 6px;
+}
+
+.en {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2px;
+  margin-left: 5px;
+}
+
+.category-id-field {
+  padding: 0 5px;
+  margin-bottom: 15px;
+}
+
+.spend-category-id-select {
+  height: 27px;
+  width: 190px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 3px 6px;
+  font-size: 13px;
+}
+
+.memo-field {
+  padding: 0 5px;
+  margin-bottom: 20px;
+}
+
+.spend-memo-form {
+  height: 50px;
+  width: 205px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 13px;
+}
+
+.submit {
+  height: 30px;
+  width: 150px;
+  font-size: 15px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(195, 195, 254);
+}
+
+.submit:hover {
+  background-color: blue;
+}
+
+.a-day-spend-list {
+  background-color: rgb(238, 202, 191);
+}
+
+.a-day-spend-info {
+  display: flex;
+  height: 30px;
+  border-bottom: 1px solid black;
+}
+
+.a-day-category-info {
+  width: 27%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  border-right: 1px solid black;
+}
+
+.a-day-money-info {
+  width: 38%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  border-right: 1px solid black;
+}
+
+.a-day-memo-info {
+  width: 35%;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+}

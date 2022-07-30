@@ -1,0 +1,64 @@
+.side-bar-top {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-bar-bottom {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 80%;
+  height: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon:hover {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.calendar-icon {
+  width: 85%;
+  height: 85%;
+  background-image: url('calendar.png');
+  background-size: cover;
+}
+
+.category-icon {
+  width: 85%;
+  height: 85%;
+  background-image: url('category.png');
+  background-size: cover;
+}
+
+.fix-icon {
+  width: 85%;
+  height: 85%;
+  background-image: url('fix.png');
+  background-size: cover;
+}
+
+.graph-icon {
+  width: 85%;
+  height: 85%;
+  background-image: url('graph.png');
+  background-size: cover;
+}
+
+.user-icon {
+  width: 85%;
+  height: 85%;
+  background-image: url('user.png');
+  background-size: cover;
+}

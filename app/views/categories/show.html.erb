@@ -1,1 +1,39 @@
-<h1>カテゴリ詳細画面</h1>
+<div class="container">
+  <%= render partial: 'layouts/container-header' %>
+  <div class="contents">
+    <div class="contents-sub">
+      <%= render partial: 'categories/sub-contents' %>
+    </div>
+    <div class="contents-main">
+      <div class="category-show-wrapper">
+        <div class="category-show-header centering">
+          <div class="category-info">
+            <%= render partial: 'category-info', locals: {category_edit: true} %>
+          </div>
+        </div>
+        <div class="category-show-contents">
+          <div class="category-show-spends-list-wrapper">
+            <div class="spends-list">
+              <div class="spends-list-header">
+                <div class="spends-list-date centering">日付</div>
+                <div class="spends-list-category centering">カテゴリ</div>
+                <div class="spends-list-money centering">金額</div>
+                <div class="spends-list-memo centering">メモ</div>
+              </div>
+              <div class="spends-list-contents">
+                <div class="spends-list-content">
+                  <div class="spends-list-date centering">2022-7-1</div>
+                  <div class="spends-list-category centering">食費</div>
+                  <div class="spends-list-money centering">2000円</div>
+                  <div class="spends-list-memo">友人と外食に行った。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contents-hidden">
+    </div>
+  </div>
+</div>

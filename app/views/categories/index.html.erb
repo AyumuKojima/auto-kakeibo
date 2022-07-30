@@ -2,7 +2,7 @@
   <%= render partial: 'layouts/container-header' %>
   <div class="contents">
     <div class="contents-sub">
-      <%= render partial: 'categories/sub-contents' %>
+      <%= render partial: 'categories/sub-contents', locals: { category_edit: false, category_show: false } %>
     </div>
     <div class="contents-main">
       <div class="categories-wrapper">

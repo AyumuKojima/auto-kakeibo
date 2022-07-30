@@ -1,0 +1,44 @@
+<div class="container">
+  <%= render partial: 'layouts/container-header' %>
+  <div class="contents">
+    <div class="contents-sub">
+      <%= render partial: 'spends/sub-contents' %>
+    </div>
+    <div class="contents-main">
+      <div class="categories-wrapper">
+        <div class="categories-switch-btn">
+          <div class="categories-spend-btn centering pointer"><span class="minus-deg">支出</span></div>
+          <div class="categories-income-btn centering pointer"><span class="minus-deg">収入</span></div>
+        </div>
+        <div class="categories-list">
+          <div class="category-info">
+            <div class="category-info-header">
+              <div class="category-name">
+                食費
+              </div>
+              <div class="category-btn centering">
+                <a href='#' class="to-category-show centering">詳細</a>
+              </div>
+            </div>
+            <div class="category-info-footer">
+              <div class="category-color-bar">
+                <div class="category-color-bar-meter" style="width: 50%;">
+                  25,000円
+                </div>
+              </div>
+              <div class="category-percentages">
+                <p class="category-percentage">0</p>
+                <p class="category-percentage">25</p>
+                <p class="category-percentage">50</p>
+                <p class="category-percentage">75</p>
+                <p class="category-percentage">100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contents-hidden">
+    </div>
+  </div>
+</div>

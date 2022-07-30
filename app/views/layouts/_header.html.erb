@@ -5,15 +5,28 @@
     </div>
   </div>
   <div class="header-right">
-    <% if @month == 1 %>
-      <%= link_to '<', year_month_spends_path(@year-1, 12), class: 'to-last-month' %>
-    <% else %>
-      <%= link_to '<', year_month_spends_path(@year, @month-1), class: 'to-last-month' %>
-    <% end %>
-    <% if @month == 12 %>
-      <%= link_to '>', year_month_spends_path(@year+1, 1), class: 'to-next-month' %>
-    <% else %>
-      <%= link_to '>', year_month_spends_path(@year, @month+1), class: 'to-next-month' %>
+    <% if request.path == "/years/#{@year}/months/#{@month}/spends" %>
+      <% if @month == 1 %>
+        <%= link_to '<', year_month_spends_path(@year-1, 12), class: 'to-last-month' %>
+      <% else %>
+        <%= link_to '<', year_month_spends_path(@year, @month-1), class: 'to-last-month' %>
+      <% end %>
+      <% if @month == 12 %>
+        <%= link_to '>', year_month_spends_path(@year+1, 1), class: 'to-next-month' %>
+      <% else %>
+        <%= link_to '>', year_month_spends_path(@year, @month+1), class: 'to-next-month' %>
+      <% end %>
+    <% elsif request.path == "/years/#{@year}/months/#{@month}/categories" %>
+      <% if @month == 1 %>
+        <%= link_to '<', year_month_categories_path(@year-1, 12), class: 'to-last-month' %>
+      <% else %>
+        <%= link_to '<', year_month_categories_path(@year, @month-1), class: 'to-last-month' %>
+      <% end %>
+      <% if @month == 12 %>
+        <%= link_to '>', year_month_categories_path(@year+1, 1), class: 'to-next-month' %>
+      <% else %>
+        <%= link_to '>', year_month_categories_path(@year, @month+1), class: 'to-next-month' %>
+      <% end %>
     <% end %>
     <div class="header-month">
       <div class="display-year" id="display-year"><%= @year %></div>
@@ -21,6 +34,10 @@
       <div class="display-month" id="display-month"><%= @month %></div>
       <p class="gatu">月</p>
     </div>
-    <%= link_to '今月', year_month_spends_path(Time.now.year, Time.now.month), class: 'to-this-month' %>
+    <% if request.path == "/years/#{@year}/months/#{@month}/spends" %>
+      <%= link_to '今月', year_month_spends_path(Time.now.year, Time.now.month), class: 'to-this-month' %>
+    <% elsif request.path == "/years/#{@year}/months/#{@month}/categories" %>
+      <%= link_to '今月', year_month_categories_path(Time.now.year, Time.now.month), class: 'to-this-month' %>
+    <% end %>
   </div>
 </div>

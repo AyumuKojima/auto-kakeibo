@@ -17,7 +17,7 @@
                 食費
               </div>
               <div class="category-btn centering">
-                <a href='#' class="to-category-show centering">詳細</a>
+                <%= link_to '詳細', year_month_category_path(@year, @month, 1), class: "to-category-show centering" %>
               </div>
             </div>
             <div class="category-info-footer">

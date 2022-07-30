@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :year_month_params, only: :index
   def index
   end
 

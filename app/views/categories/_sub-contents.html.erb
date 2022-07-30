@@ -1,0 +1,34 @@
+<div class="contents-sub-main">
+  <% if category_show %>
+    <div class="sub-contents-header">
+      <p>カテゴリ編集フォーム</p>
+      <p class="hide-form-btn pointer centering" style="display:none;">▲</p>
+      <p class="hide-form-btn pointer centering">▼</p>
+    </div>
+    <div class="category-form-wrapper centering" style="display:none;">
+      <%= render partial: 'categories/category-form', locals: { category_edit: category_edit } %>
+    </div>
+    <div class="sub-contents-header">
+      <p>支出・収入フォーム</p>
+      <p class="hide-form-btn pointer centering">▲</p>
+      <p class="hide-form-btn pointer centering" style="display:none;">▼</p>
+    </div>
+    <div class="switch-btns">
+      <div class="spend-btn pointer">支出</div>
+      <div class="income-btn pointer">収入</div>
+    </div>
+    <div class="spend-form-wrapper">
+      <%= render partial: 'spends/spend-form', locals: { spend_edit: false } %>
+    </div>
+  <% else %>
+    <div class="sub-contents-header">
+      <p>カテゴリ入力フォーム</p>
+      <p class="hide-form-btn pointer centering">▲</p>
+      <p class="hide-form-btn pointer centering" style="display:none;">▼</p>
+    </div>
+    <div class="category-form-wrapper centering">
+      <%= render partial: 'categories/category-form', locals: { category_edit: category_edit } %>
+    </div>
+  <% end %>
+</div>
+<div class="contents-sub-bar centering pointer">◀︎</div>

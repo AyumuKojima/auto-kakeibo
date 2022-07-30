@@ -1,0 +1,23 @@
+<div class="container">
+  <%= render partial: 'layouts/container-header' %>
+  <div class="contents">
+    <div class="contents-sub">
+      <%= render partial: 'categories/sub-contents', locals: { category_edit: false, category_show: false } %>
+    </div>
+    <div class="contents-main">
+      <div class="categories-wrapper">
+        <div class="categories-switch-btn">
+          <div class="categories-spend-btn centering pointer"><span class="minus-deg">支出</span></div>
+          <div class="categories-income-btn centering pointer"><span class="minus-deg">収入</span></div>
+        </div>
+        <div class="categories-list">
+          <div class="category-info">
+            <%= render partial: 'category-info', locals: { category_edit: false } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contents-hidden">
+    </div>
+  </div>
+</div>

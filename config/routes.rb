@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :years, only: :index do
     resources :months, only: :index do
       resources :spends, only: :index
+      resources :categories, only: [:index, :show]
     end
   end
 end

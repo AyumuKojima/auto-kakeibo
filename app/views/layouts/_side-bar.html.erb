@@ -3,9 +3,9 @@
     <%= link_to year_month_spends_path(@year, @month), class: 'icon' do %>
       <div class="calendar-icon"></div>
     <% end %>
-    <a class="icon" href="#">
+    <%= link_to year_month_categories_path(@year, @month), class: 'icon' do %>
       <div class="category-icon"></div>
-    </a>
+    <% end %>
     <a class="icon" href="#">
       <div class="fix-icon"></div>
     </a>

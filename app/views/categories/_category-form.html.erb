@@ -1,0 +1,46 @@
+<%= form_with class: 'category-form', id: 'category-input-form' do |f| %>
+  <div class="category-form-header centering">
+    <% if category_edit %>
+      <div class="category-form-title centering">カテゴリ編集</div>
+    <% else %>
+      <div class="category-form-title centering">カテゴリ登録</div>
+    <% end %>
+  </div>
+  <div class="category-fields">
+    <div class="error-messages" id="category-error-form" style="display: none;"><ul id="category-error-messages"></ul></div>
+    <div class="category-kind-field centering">
+      <select class="category-kind-select pointer">
+        <option value='1'>支出</option>
+        <option value='2'>収入</option>
+      </select>
+    </div>
+    <div class="category-title-field">
+      <div class="label-field">
+        <%= f.label :title, class: "label" %>
+      </div>
+      <div class="category-title-form-cover">
+        <%= f.text_field :title, class: "category-title-form", placeholder: "カテゴリ名を入力" %>
+      </div>
+    </div>
+    <div class="category-color-field">
+      <div class="label-field">
+        <%= f.label :color, class: "label" %>
+      </div>
+      <div class="category-color-form-cover">
+        <select class="category-color-select pointer">
+          <option value="1">あか</option>
+          <option value="2">あお</option>
+          <option value="3">みどり</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="category-submit-fields">
+    <% if category_edit %>
+      <%= f.submit '編集する', id: 'category-edit-submit', class: 'category-submit centering' %>
+      <div class="category-delete-btn centering pointer" id="category-delete-btn">削除する</div>
+    <% else %>
+      <%= f.submit "登録する", id: "category-input-submit", class: "category-submit centering" %>
+    <% end %>
+  </div>
+<% end %>

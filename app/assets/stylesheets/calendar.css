@@ -1,0 +1,88 @@
+.to-month-show {
+  height: 5%;
+  width: calc(100% - 40px);
+  margin: 5px 20px;
+  color: aliceblue;
+}
+
+.month-show-btn {
+  height: 90%;
+  width: 15%;
+  background-color: rgb(250, 113, 113);
+  border-radius: 5px;
+}
+
+.calendar-wrapper {
+  height: 93%;
+  width: 100%;
+}
+
+.calendar {
+  height: 99%;
+  width: 98%;
+  border: 1px solid black;
+}
+
+.week-row {
+  height: 40px;
+  display: flex;
+  background-color: rgb(255, 242, 228);
+}
+
+.week {
+  width: calc(100% / 7);
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+}
+
+.sunday {
+  color: red;
+  background-color: rgb(255, 232, 232);
+} 
+
+.saturday {
+  color: blue;
+  background-color: rgb(237, 237, 255);
+}
+
+.calendar-rows {
+  height: calc(100% - 40px);
+  background-color: rgb(255, 246, 236);
+}
+
+.calendar-row {
+  height: calc(100% / 6);
+  border: 1px solid black;
+  display: flex;
+}
+
+.calendar-date {
+  height: 100%;
+  width: calc(100% / 7);
+  border: 1px solid black;
+}
+
+.last-month-date, .next-month-date {
+  background-color: rgb(241, 241, 241);
+}
+
+.date-num {
+  height: 25%;
+  font-size: 15px;
+  border-bottom: 1px solid black;
+}
+
+.date-sums {
+  height: 75%;
+  font-size: 14px;
+}
+
+.spend-date-sum {
+  height: 50%;
+  color: blue;
+}
+
+.income-date-sum {
+  height: 50%;
+  color: rgb(45, 189, 45);
+}

@@ -1,0 +1,26 @@
+<div class="category-info-header">
+  <div class="category-name">
+    食費
+  </div>
+  <div class="category-btn centering">
+    <% if category_edit %>
+      <div class="to-category-show centering pointer" id="category-edit-btn">編集</div>
+    <% else %>
+      <%= link_to '詳細', year_month_category_path(@year, @month, 1), class: "to-category-show centering" %>
+    <% end %>
+  </div>
+</div>
+<div class="category-info-footer">
+  <div class="category-color-bar">
+    <div class="category-color-bar-meter" style="width: 50%;">
+      25,000円
+    </div>
+  </div>
+  <div class="category-percentages">
+    <p class="category-percentage">0</p>
+    <p class="category-percentage">25</p>
+    <p class="category-percentage">50</p>
+    <p class="category-percentage">75</p>
+    <p class="category-percentage">100%</p>
+  </div>
+</div>

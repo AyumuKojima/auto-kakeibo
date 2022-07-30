@@ -1,0 +1,211 @@
+.categories-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categories-switch-btn {
+  height: 30px;
+  width: 300px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.categories-spend-btn {
+  width: 75%;
+  color: blue;
+  font-weight: bold;
+  background-color: skyblue;
+  transform: skewX(150deg);
+}
+
+.minus-deg {
+  transform: skewX(-150deg);
+}
+
+.categories-income-btn {
+  width: 25%;
+  color: green;
+  font-weight: bold;
+  background-color: greenyellow;
+  transform: skewX(150deg);
+}
+
+.categories-list {
+  height: calc(98% - 80px);
+  width: 95%;
+  margin-top: 30px;
+  overflow-y: scroll;
+}
+
+.category-info {
+  height: 110px;
+  width: 90%;
+  border: 3px solid orange;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category-info-header {
+  height: 35%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-info-footer {
+  height: 65%;
+  width: 100%;
+}
+
+.category-name {
+  height: 95%;
+  width: 280px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  font-weight: bold;
+  color: orange;
+}
+
+.category-btn {
+  height: 100%;
+  width: 150px;
+  margin-right: 20px;
+}
+
+.to-category-show {
+  height: 70%;
+  width: 35%;
+  border-radius: 5px;
+  color: white;
+  background-color: orange;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.category-color-bar {
+  height: 63%;
+  width: 97%;
+  margin-left: 1%;
+  margin-top: 5px;
+  border: 2px solid orange;
+  border-radius: 5px;
+}
+
+.category-color-bar-meter {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  font-weight: bold;
+  padding-left: 15px;
+  color: orange;
+  background-color: rgba(251, 163, 0, 0.25);
+}
+
+.category-percentages {
+  height: 27%;
+  width: 98.5%;
+  margin: 3px 0.5% 0 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-percentage {
+  font-size: 12px;
+  color: orange;
+}
+
+.category-show-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-show-header {
+  height: 170px;
+  width: 95%;
+}
+
+.category-show-contents {
+  height: calc(100% - 190px);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-show-spends-list-wrapper {
+  height: 100%;
+  width: 85%;
+}
+
+.spends-list {
+  height: 100%;
+  width: 100%;
+}
+
+.spends-list-header {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+  background-color: rgb(255, 218, 173);
+}
+
+.spends-list-date {
+  height: 100%;
+  width: 150px;
+  font-size: 16px;
+  border-right: 1px solid black;
+}
+
+.spends-list-category {
+  height: 100%;
+  width: 150px;
+  font-size: 16px;
+  border-right: 1px solid black;
+}
+
+.spends-list-money {
+  height: 100%;
+  width: 150px;
+  font-size: 16px;
+  border-right: 1px solid black;
+}
+
+.spends-list-memo {
+  height: 100%;
+  width: calc(100% - 450px);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding-left: 10px;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.spends-list-contents {
+  height: calc(100% - 45px);
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.spends-list-content {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+  border-top: none;
+  background-color: rgb(232, 248, 255);
+}
+

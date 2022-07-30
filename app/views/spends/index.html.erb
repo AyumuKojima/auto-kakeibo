@@ -2,33 +2,7 @@
   <%= render partial: 'layouts/container-header' %>
   <div class="contents">
     <div class="contents-sub">
-      <div class="contents-sub-main">
-        <div class="switch-btns">
-          <div class="spend-btn">支出</div>
-          <div class="income-btn">収入</div>
-        </div>
-        <div class="form-header">
-          <p>入力・編集フォーム</p>
-          <p class="hide-form-btn pointer centering">▲</p>
-          <p class="hide-form-btn pointer centering" style="display:none;">▼</p>
-        </div>
-        <div class="spend-form-wrapper">
-          <%= render partial: 'spend-form', locals: { spend_edit: false } %>
-        </div>
-        <div class="form-header">
-          <p>26日の支出一覧</p>
-          <p class="hide-form-btn pointer centering">▲</p>
-          <p class="hide-form-btn pointer centering" style="display:none;">▼</p>
-        </div>
-        <div class="a-day-spend-list">
-          <div class="a-day-spend-info">
-            <p class="a-day-category-info centering">食費</p>
-            <p class="a-day-money-info centering">1200円</p>
-            <p class="a-day-memo-info">友人と外食に行った。</p>
-          </div>
-        </div>
-      </div>
-      <div class="contents-sub-bar centering pointer">◀︎</div>
+      <%= render partial: 'spends/sub-contents' %>
     </div>
     <div class="contents-main">
       <div href="#" class="to-month-show centering"><a href="#" class="month-show-btn centering">一覧表示画面へ</a></div>
